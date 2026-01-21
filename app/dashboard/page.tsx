@@ -28,7 +28,7 @@ export default async function Dashboard() {
                 {userResult.map((user) => (
                     // O "key" é obrigatório para performance (igual DiffUtil id)
                     // Ao clicar, o navegador vai para /dashboard/1, /dashboard/2, etc.
-                    <Link key={user.id} href={`/dashboard/${user.id}`}>
+                    <Link key={user.id} href={`/dashboard/${user.id}?name=${user.firstName}`}>
                         <UserCard user={user} />
                     </Link>
                 ))}
